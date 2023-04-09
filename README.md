@@ -14,7 +14,7 @@ Technologies used:
     Google Books API
 
 Demo:
-You can see a live demo of the app here.
+You can see a live demo of the app [here](https://sriniketh-book-search-app.netlify.app/).
 
 Credits:
 The app was built by Sriniketh2703. If you have any questions or suggestions, please feel free to contact me.
