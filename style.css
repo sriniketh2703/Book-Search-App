@@ -1,0 +1,182 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  height: fit-content;
+  width: fit-content;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.title {
+  font-size: 1.55rem;
+}
+
+.input-container {
+  transform: scale(0.9);
+  display: flex;
+  height: 5.5rem;
+  width: 23rem;
+  background-color: #c8c8c8;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+input:is(:focus) {
+  outline: 3px solid;
+}
+
+.inputArea {
+  font-size: 1.25rem;
+  background: white;
+  padding: 0.75rem;
+  outline: none;
+  border: none;
+}
+
+button {
+  background: white;
+  padding: 0.3rem 1.2rem;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+button:is(:focus) {
+  outline: 2px solid;
+}
+
+button:focus,
+.inputArea:focus {
+  animation: scale-up 0.2s ease-in-out;
+  height: 3rem;
+}
+
+@keyframes scale-up {
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.inputArea.active {
+  animation: shake 2s infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  10% {
+    transform: translateX(-3px);
+  }
+
+  20% {
+    transform: translateX(3px);
+  }
+
+  30% {
+    transform: translateX(-3px);
+  }
+
+  40% {
+    transform: translateX(3px);
+  }
+
+  50% {
+    transform: translateX(-3px);
+  }
+
+  60% {
+    transform: translateX(3px);
+  }
+
+  70% {
+    transform: translateX(-3px);
+  }
+
+  80% {
+    transform: translateX(3px);
+  }
+
+  90% {
+    transform: translateX(-3px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.inputArea,
+button,
+.input-container {
+  border-radius: 1rem;
+}
+
+.book-details_container {
+  transform: scale(0.9);
+  border-radius: 1rem;
+  outline: 5px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2rem 1rem;
+  gap: 0.5rem;
+  transition: all 0.5s ease-in-out;
+}
+
+img {
+  height: 15rem;
+  margin: 0 0 1rem;
+  outline: 2px solid;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+.hide {
+  display: none;
+}
+
+/* Responsive layout design changes */
+@media (max-width: 640px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .input-container,
+  .book-details_container {
+    transform: scale(0.9);
+  }
+
+  main {
+    padding: 0;
+  }
+}
