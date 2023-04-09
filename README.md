@@ -17,4 +17,4 @@ Demo:
 You can see a live demo of the app here.
 
 Credits:
-The app was built by [Your Name]. If you have any questions or suggestions, please feel free to contact me.
+The app was built by Sriniketh2703. If you have any questions or suggestions, please feel free to contact me.
