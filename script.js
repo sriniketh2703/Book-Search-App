@@ -40,9 +40,11 @@ function start(inputData) {
       page_count.textContent = "Page Count: " + page_Count;
       publisher_name.textContent = "Publisher: " + publication;
       Category.textContent = "Category: " + category;
-      rating.textContent = "Average Rating: " + "⭐".repeat(averageRating);
+      rating.textContent = rating.textContent
+        ? "Average Rating: " + "⭐".repeat(averageRating)
+        : "Average Rating: Unknown";
       image.src = thumbnail;
-      image.alt = "This is the cover of " + book_name.textContent;
+      image.alt = "There's no cover for the book " + book_name.textContent;
       book_container.classList.remove("hide");
     })
     .catch((error) => console.log("Error: " + error.message));
